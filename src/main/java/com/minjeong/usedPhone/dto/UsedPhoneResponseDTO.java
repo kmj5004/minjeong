@@ -1,16 +1,15 @@
-package com.minjeong.usedPhone.entity;
+package com.minjeong.usedPhone.dto;
 
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-@Table(name = "PRODUCTS")
-public class UsedPhoneEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor
+@AllArgsConstructor
+public class UsedPhoneResponseDTO {
     private Long id;
     private String name;
     private String seller;

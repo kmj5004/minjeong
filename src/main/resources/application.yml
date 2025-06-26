@@ -10,3 +10,24 @@ spring:
       hibernate:
         format_sql: true
     database-platform: org.hibernate.dialect.H2Dialect
+
+  # H2 데이터베이스 설정
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  # H2 콘솔 활성화
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # 세션 설정
+  session:
+    timeout: 3600 # 1시간
+    cookie:
+      name: JSESSIONID
+      http-only: true
+      secure: false # HTTPS 사용 시 true로 변경
